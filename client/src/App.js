@@ -17,12 +17,12 @@ export default class App extends Component {
     savedList.push(movie);
     this.setState({ savedList });
   };
-
+  
   render() {
     return (
       <div>
         <SavedList list={this.state.savedList} />
-        <Route path='/' component={MovieList} />
+        <Route exact path='/' component={MovieList} />
         <Route path='/movies/:id' component={Movie} />
       </div>
     );
